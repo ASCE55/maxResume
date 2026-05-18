@@ -939,3 +939,91 @@ body::before {
 .sticker:active {
   cursor: grabbing !important;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 950px) {
+  .resume-container {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+    cursor: auto; /* Restore default cursor for touch devices */
+  }
+
+  /* Disable Custom Cursor on Mobile */
+  #cursor, #cursor-follower {
+    display: none !important;
+  }
+  a, button, .sticker, .project-box, .skill-icon {
+    cursor: pointer;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .name-container {
+    padding: 0;
+  }
+
+  .first-name {
+    font-size: 50px;
+  }
+
+  .last-name {
+    font-size: 12px;
+    letter-spacing: 8px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .qr-code-section {
+    align-items: center;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Scale down expertise stickers for mobile so they fit */
+  .expertise-stickers {
+    transform: scale(0.85);
+    transform-origin: top center;
+    height: 250px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .first-name {
+    font-size: 40px;
+  }
+
+  .last-name {
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+  
+  .expertise-stickers {
+    transform: scale(0.7);
+    height: 200px;
+  }
+}
